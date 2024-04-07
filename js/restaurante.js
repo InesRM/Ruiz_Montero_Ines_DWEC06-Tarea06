@@ -981,7 +981,7 @@ let RestaurantsManager = (function () {
         //si la categoría no existe se crea
         this.addAllergen(allergenName);
         //Misma lógica que en el método anterior
-        AllergenToDish(allergenName, ...dishes);
+        assignAllergenToDish(allergenName, ...dishes);
       }
     }
 
