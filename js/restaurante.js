@@ -932,7 +932,7 @@ let RestaurantsManager = (function () {
       } else {
         //si la categoría no existe se crea
         this.addCategory(cat);
-        //Misma lógica que en el método anterior
+        //Volvemos a llamar al método, ya que la categoría ya existe y se añade el plato
         this.assignCategoryToDish(cat, ...dishes);
       }
     }
@@ -980,8 +980,8 @@ let RestaurantsManager = (function () {
       } else {
         //si la categoría no existe se crea
         this.addAllergen(allergenName);
-        //Misma lógica que en el método anterior
-        assignAllergenToDish(allergenName, ...dishes);
+        //Misma lógica que en el método anterior, volvemos a llamar al método para asignar el plato
+        this.assignAllergenToDish(allergenName, ...dishes);
       }
     }
 

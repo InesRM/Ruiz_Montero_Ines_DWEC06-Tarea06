@@ -1514,10 +1514,10 @@ showModifyCatModal(done, category, dish, error) {
     body.replaceChildren();
     if (done) {
         body.insertAdjacentHTML('afterbegin', 
-        `<div class="p-3">Las categoría ${category.category.name} del plato <strong>${dish.name}</strong> han sido modificadas correctamente.</div>`);
+        `<div class="p-3"> El plato <strong>${dish.name}</strong> han sido añadido a la categoría: ${category.category.name} correctamente.</div>`);
     } else {
         body.insertAdjacentHTML('afterbegin', 
-        `<div class="error text-danger p-3"><i class="bi bi-exclamation-triangle"></i> La categoría ${category.name} del plato <strong>${dish.name}</strong> no han podido modificarse correctamente debido al error: ${error}.</div>`);
+        `<div class="error text-danger p-3"><i class="bi bi-exclamation-triangle"></i> El plato <strong>${dish.name}</strong> no han podido añadirse correctamente a la categoría: ${category.category.name} debido al error: ${error}.</div>`);
     }
     messageModal.show();
     const listener = (event) => {
